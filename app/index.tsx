@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 import * as React from 'react';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -31,7 +31,13 @@ export default function Index() {
         alignItems: 'center',
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text style={styleSheet.textStyle}>Edit app/index.tsx to edit this screen.</Text>
     </View>
   );
 }
+
+const styleSheet = StyleSheet.create({
+  textStyle: {
+    fontFamily: 'extrabold',
+  },
+});
