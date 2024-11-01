@@ -5,6 +5,7 @@ import HomeScreen from '@/screens/HomeScreen';
 import SearchScreen from '@/screens/SearchScreen';
 import ProfileScreen from '@/screens/ProfileScreen';
 import { Ionicons } from '@expo/vector-icons';
+import { COLORS } from '../constants/index';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,12 +31,40 @@ const BottomTabNavigation = () => {
         component={HomeScreen}
         options={{
           tabBarIcon: (focused) => {
-            return <Ionicons name={focused ? 'home' : 'home-outline'} size={24} />;
+            return (
+              <Ionicons
+                name={focused ? 'home' : 'home-outline'}
+                size={24}
+                color={focused ? COLORS.primary : COLORS.gray2}
+              />
+            );
           },
         }}
       />
-      <Tab.Screen name="Search" component={SearchScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen
+        name="Search"
+        component={SearchScreen}
+        options={{
+          tabBarIcon: (focused) => {
+            return <Ionicons name={'search-sharp'} size={24} color={focused ? COLORS.primary : COLORS.gray2} />;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: (focused) => {
+            return (
+              <Ionicons
+                name={focused ? 'person' : 'person-outline'}
+                size={24}
+                color={focused ? COLORS.primary : COLORS.gray2}
+              />
+            );
+          },
+        }}
+      />
     </Tab.Navigator>
   );
 };
