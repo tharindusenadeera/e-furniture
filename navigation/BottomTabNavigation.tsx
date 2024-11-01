@@ -1,11 +1,8 @@
-import { View, Text } from 'react-native';
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from '@/screens/HomeScreen';
-import SearchScreen from '@/screens/SearchScreen';
-import ProfileScreen from '@/screens/ProfileScreen';
 import { Ionicons } from '@expo/vector-icons';
 import { COLORS } from '../constants/index';
+import { HomeScreen, SearchScreen, ProfileScreen } from '../screens/index';
 
 const Tab = createBottomTabNavigator();
 
