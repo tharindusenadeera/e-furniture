@@ -27,7 +27,7 @@ const BottomTabNavigation = () => {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: (focused) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <Ionicons
                 name={focused ? 'home' : 'home-outline'}
@@ -42,7 +42,7 @@ const BottomTabNavigation = () => {
         name="Search"
         component={SearchScreen}
         options={{
-          tabBarIcon: (focused) => {
+          tabBarIcon: ({ focused }) => {
             return <Ionicons name={'search-sharp'} size={24} color={focused ? COLORS.primary : COLORS.gray2} />;
           },
         }}
@@ -51,7 +51,7 @@ const BottomTabNavigation = () => {
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: (focused) => {
+          tabBarIcon: ({ focused }) => {
             return (
               <Ionicons
                 name={focused ? 'person' : 'person-outline'}
