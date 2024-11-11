@@ -20,6 +20,17 @@ const styles = StyleSheet.create({
     fontSize: SIZES.medium,
     color: COLORS.gray,
   },
+  titleWrapper: {
+    marginHorizontal: 22,
+    marginTop: SIZES.medium,
+  },
+  titleBold: {
+    color: COLORS.black,
+    fontFamily: 'bold',
+    fontSize: SIZES.xLarge,
+    fontWeight: '900',
+  },
+  titleGray: {},
 });
 
 export default styles;
