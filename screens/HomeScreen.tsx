@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import React from 'react';
 import styles from './styles/home.style';
 import { Ionicons, Fontisto } from '@expo/vector-icons';
@@ -10,7 +10,14 @@ const HomeScreen = () => {
         <View style={styles.appBar}>
           <Ionicons name="location-outline" size={24} />
           <Text style={styles.location}> Sri Lanka</Text>
-          <Fontisto name="shopping-bag" size={24} />
+          <View style={styles.cart}>
+            <View style={styles.carCount}>
+              <Text style={styles.cartNumber}>8</Text>
+            </View>
+            <TouchableOpacity>
+              <Fontisto name="shopping-bag" size={24} />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
       <View style={styles.titleWrapper}>

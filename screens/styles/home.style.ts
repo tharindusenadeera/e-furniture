@@ -31,6 +31,26 @@ const styles = StyleSheet.create({
     fontWeight: '900',
   },
   titleGray: {},
+  cart: {
+    alignItems: 'flex-end',
+  },
+  carCount: {
+    position: 'absolute',
+    bottom: 16,
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    alignItems: 'center',
+    backgroundColor: 'green',
+    justifyContent: 'center',
+    zIndex: 999,
+  },
+  cartNumber: {
+    fontFamily: 'regular',
+    fontWeight: '600',
+    fontSize: 10,
+    color: COLORS.lightWhite,
+  },
 });
 
 export default styles;
